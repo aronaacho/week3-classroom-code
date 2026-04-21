@@ -1,6 +1,5 @@
 const express = require('express')
 const app = express()
-const port = 3001
 
 var indexRouter = require('./routes/index');
 var carsRouter = require('./routes/cars');
@@ -13,6 +12,4 @@ var carsRouter = require('./routes/cars');
 app.use('/', indexRouter);
 app.use('/cars', carsRouter);
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+module.exports = app;
